@@ -1,4 +1,4 @@
-// https://github.com/risaco/crystal-collector
+
 
 $(document).ready(function () {
 
@@ -149,7 +149,7 @@ $(document).ready(function () {
             $("#loseCount").html("Losses: " + losses);
 
             setTimeout(function () {
-                gameReset("YOU LOSE! HOORAY?")
+                gameReset("YOU LOSE! HOORAY? QUESTION MARK?")
             }, 200);
         }
     });
