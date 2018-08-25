@@ -1,17 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <title>Crystal Gem Collector!</title>
 
 </head>
+
 <body>
-    
+
+    <div id="header">
+        <h1 class="text-center">Crystal Gems Collector</h1>
+        <h2 class="text-center">How To Play</h2>
+        <p class="text-center">
+            You will be given a random number at the beginning of the game. Each member of the Crystal
+            Gems below has a random value. Your job is to click on the Crystal Gems below in
+            just the right way to match the number given to you. 
+        </p>
+        <p class="text-center">
+            Match the number to win! If you go over, you lose! Are you up to it?
+        </p>
+    </div>
+
+    <!-- 2nd row containing the match number, buttons and total points -->
+    <div class="container.fluid" id=numbersAndButtons>
+        <div class=row>
+            <div class="col-md-3" id="matchNumber">
+                <h3 class="text-center" id="random">Match Number:</h3>
+                <h1 class="numberBox text-center" id="randomNumber">120</h1>
+            </div>
+            <div class="col-md-6 text-center" id="buttons">
+                <div id="crystalButtons">
+                    <!-- Button 1: Steven -->
+                    <button id="steven">
+                        <img src="assets/images/steven.JPG">
+                    </button>
+                    <!-- Button 2: Garnet -->
+                    <button id="garnet">
+                        <img src="assets/images/garnet.JPG">
+                    </button>
+                    <!-- Button 3: Amethyst -->
+                    <button id="amethyst">
+                        <img src="assets/images/amethyst.JPG">
+                    </button>
+                    <!-- Button 4: Pearl -->
+                    <button id="pearl">
+                        <img src="assets/images/pearl.JPG">
+                    </button>
+                </div>
+
+
+            </div>
+            <div class="col-md-3" id="totalPoints">
+                <h3 class="text-center" id="score">Your Total Score:</h3>
+                <h1 class="numberBox text-center" id="totalNumber">0</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3rd row for winSection and lossSection -->
+    <div class="row section" id=winsAndLosses>
+        <div class="col-md-6" id="winSection">
+            <h3 class="text-center" id="winCount">Wins: 0</h3>
+        </div>
+
+        <!-- losses column -->
+        <div class="col-md-6" id="lossSection">
+            <h3 class="text-center" id="loseCount">Losses: 0</h3>
+        </div>
+    </div>
+
+
+
+
+    <script src="assets/javascript/game.js"></script>
+
 </body>
+
 </html>
